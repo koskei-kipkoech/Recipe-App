@@ -13,7 +13,7 @@ const Mealinfo = () => {
         console.log(jsonData.meals[0])
         setInfo(jsonData.meals[0])
     }
-    if(info != ""){
+    if(info !== ""){
         getInfo()
     }
     return (
@@ -21,7 +21,7 @@ const Mealinfo = () => {
             {
             !info ? "Data Not Found" : 
             <div className='mealInfo'>
-            <img src={info.strMealThumb} />
+            <img src={info.strMealThumb} alt=''/>
             <div className='info'>
                 <h1>Recipe Details</h1>
                 <button>{info.strMeal}</button>

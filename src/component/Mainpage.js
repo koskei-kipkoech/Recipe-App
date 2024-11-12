@@ -13,7 +13,7 @@ const Mainpage = () => {
     }
 
     const myFun = async() => {
-        if(search == ""){
+        if(search === ""){
             setMessage("Please Enter Something 🍔")
         }else{
             const get = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
