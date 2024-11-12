@@ -1,29 +1,56 @@
-.App {
-  text-align: center;
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
-.searchBar{
+
+body.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Search Bar Styles */
+.searchBar {
   display: flex;
   justify-content: center;
   gap: 7px;
   margin-top: 22px;
 }
-.searchBar input{
+
+.searchBar input {
   width: 400px;
   padding: 9px;
   font-size: 22px;
   border: 1px solid greenyellow;
   background-color: #e7e7e7;
   border-radius: 6px;
+  transition: background-color 0.3s, border-color 0.3s;
 }
-.searchBar button{
+
+body.dark-theme .searchBar input {
+  background-color: #333333;
+  border-color: #bb86fc;
+  color: #ffffff;
+}
+
+.searchBar button {
   width: 90px;
   background-color: rgb(98, 228, 98);
   color: black;
   border-radius: 10px;
   font-size: 20px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
-.meals{
+
+body.dark-theme .searchBar button {
+  background-color: #03dac5;
+  color: #121212;
+}
+
+/* Meals Styles */
+.meals {
   display: flex;
   flex-wrap: wrap;
   gap: 21px;
@@ -31,26 +58,40 @@
   width: 90%;
   margin: auto;
   margin-top: 44px;
-  box-shadow: 1rem black;
 }
-.meals img{
+
+body.dark-theme .meals {
+  box-shadow: none;
+}
+
+/* Meal Image Styles */
+.meals img {
   width: 100%;
   height: 270px;
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
 }
-.mealImg{
+
+.mealImg {
   width: 300px;
   height: 380px;
   text-align: center;
   background-color: #fff;
   box-shadow: 0px 3px 3px 3px rgb(240, 240, 240);
   border-radius: 11px;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
-.mealImg p{
+
+body.dark-theme .mealImg {
+  background-color: #1e1e1e;
+  box-shadow: 0px 3px 3px 3px rgb(50, 50, 50);
+}
+
+.mealImg p {
   font-weight: 600;
 }
-.mealImg button{
+
+.mealImg button {
   width: 120px;
   background-color: rgb(98, 228, 98);
   color: black;
@@ -59,57 +100,53 @@
   border-radius: 21px;
   padding: 7px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
-.mealInfo img{
+
+body.dark-theme .mealImg button {
+  background-color: #03dac5;
+  color: #121212;
+}
+
+/* Meal Info Styles */
+.mealInfo img {
   width: 400px;
   height: 400px;
   border-radius: 11px;
 }
+
 .mealInfo {
-  /* width: 90%; */
   height: 90vh;
   margin: auto;
   display: flex;
   gap: 22px;
-  justify-content:center ;
+  justify-content: center;
   align-items: center;
   background-color: rgb(199, 169, 113);
   padding: 32px;
+  transition: background-color 0.3s;
 }
-.mealInfo button{
+
+body.dark-theme .mealInfo {
+  background-color: #272727;
+}
+
+.mealInfo button {
   border: none;
   padding: 9px;
   border-radius: 6px;
   font-size: 19px;
   background-color: greenyellow;
   color: black;
+  transition: background-color 0.3s, color 0.3s;
 }
-.mealInfo .info{
-  margin-top: -112px;
+
+body.dark-theme .mealInfo button {
+  background-color: #bb86fc;
+  color: #121212;
 }
-.msg{
-  text-align: center;
-}
-.navbar{
-  background-color: azure;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: right;
-  position: sticky;
-  top: 0;
-}
-.navbar a{
-  color: black;
-  font-size: 1.7rem;
-  margin-left: 1rem;
-}
-.navbar a:hover{
-  background-color: rgb(98, 228, 98);
-    color: black;
-    border-radius: 10px;
-    padding: 0.5rem 1rem ;
-}
+
+/* Footer Styles */
 .footer {
   margin-top: 10px;
   background-color: azure;
@@ -119,27 +156,44 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  transition: background-color 0.3s, color 0.3s;
 }
+
+body.dark-theme .footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Home Container Styles */
 .home-container {
-  background-image: url('https://st3.depositphotos.com/10654668/15316/i/1600/depositphotos_153165422-stock-photo-person-cooking-with-cookbook.jpg'); /* Replace with your image URL */
+  background-image: url('https://st3.depositphotos.com/10654668/15316/i/1600/depositphotos_153165422-stock-photo-person-cooking-with-cookbook.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh; 
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white; 
+  color: white;
   text-align: center;
   padding: 2rem;
-  font-family: Arial, sans-serif; 
+  font-family: Arial, sans-serif;
+  transition: color 0.3s;
+}
+
+body.dark-theme .home-container {
+  color: #cfcfcf;
 }
 
 .home-container h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: aqua;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .home-container h1 {
+  color: #03dac5;
 }
 
 .home-container p {
@@ -147,6 +201,10 @@
   margin-bottom: 2rem;
   color: black;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .home-container p {
+  color: #a0a0a0;
 }
 
 .home-container button {
@@ -157,11 +215,10 @@
   border-radius: 5px;
   color: black;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.home-container button:hover {
-  background-color: rgb(78, 178, 78);
+body.dark-theme .home-container button {
+  background-color: #03dac5;
+  color: #121212;
 }
-
-

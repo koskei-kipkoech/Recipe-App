@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const Mealcards = ({detail}) => {
+    //const handleSavedRec
     console.log(detail)
     return (
         <div>
