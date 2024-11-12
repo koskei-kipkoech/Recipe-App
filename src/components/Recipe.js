@@ -1,6 +1,6 @@
 import React from 'react'
 
-function RecipeCard() {
+function Recipe() {
   return (
     <div>
       
@@ -8,6 +8,4 @@ function RecipeCard() {
   )
 }
 
-export default RecipeCard
-
-
+export default Recipe
