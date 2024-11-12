@@ -21,7 +21,7 @@ const Mealinfo = () => {
             {
             !info ? "Data Not Found" : 
             <div className='mealInfo'>
-            <img src={info.strMealThumb} alt=''/>
+            <img src={info.strMealThumb} alt='imagee'/>
             <div className='info'>
                 <h1>Recipe Details</h1>
                 <button>{info.strMeal}</button>
@@ -34,4 +34,4 @@ const Mealinfo = () => {
     )
 }
 
-export default Mealinfo
+export default Mealinfo;

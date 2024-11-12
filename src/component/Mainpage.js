@@ -20,6 +20,7 @@ const Mainpage = () => {
             const jsonData = await get.json()
             //console.log(jsonData.meals)
             setData(jsonData.meals)
+            setMessage('')
         }
     }
     
@@ -32,7 +33,7 @@ const Mainpage = () => {
                     <input type='text' placeholder='Enter Spices type...' onChange={handleInput}/>
                     <button onClick={myFun}>Search</button>
                 </div>
-                <h4>{message}</h4>
+                <h4 className='msg'>{message}</h4>
                 <div>
                     <Mealcards detail={data}/>
                 </div>
@@ -41,4 +42,4 @@ const Mainpage = () => {
     )
 }
 
-export default Mainpage
+export default Mainpage;
