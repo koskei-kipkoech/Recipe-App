@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 const Mealcards = ({detail}) => {
     const handleSaveRecipe =async (recipe) =>{
         try{
-            await fetch("http://0.0.0.0:3004/savedRecipes",{
+            await fetch("https://recipe-app-yt9e.onrender.com/savedRecipes",{
                 method:"POST",
                 headers: {
                     "Content-Type": "application/json"

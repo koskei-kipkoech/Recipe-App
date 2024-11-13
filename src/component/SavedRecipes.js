@@ -8,7 +8,7 @@ const SavedRecipes = () => {
 
     useEffect(() => {
         const fetchSavedRecipes = async () => {
-            const response = await fetch("http://0.0.0.0:3004/savedRecipes");
+            const response = await fetch("https://recipe-app-yt9e.onrender.com/savedRecipes");
             const data = await response.json();
             setSavedRecipes(data);
         };
@@ -17,7 +17,7 @@ const SavedRecipes = () => {
 
     const handleDeleteRecipe = async (id) => {
         try {
-            await fetch(`http://0.0.0.0:3004/savedRecipes/${id}`, 
+            await fetch(`https://recipe-app-yt9e.onrender.com/savedRecipes/${id}`, 
                 { method: "DELETE" });
             setSavedRecipes(savedRecipes.filter(recipe => recipe.idMeal !== id));
         } catch (error) {
