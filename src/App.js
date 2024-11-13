@@ -1,7 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
 import Mainpage from './component/Mainpage';
-import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import {Route,Routes } from 'react-router-dom';
 import Mealinfo from './component/Mealinfo';
 import Footer from './component/Footer';
 import Home from './component/Home';

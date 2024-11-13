@@ -54,7 +54,14 @@ body.dark-theme .searchBar button {
   background-color: #03dac5;
   color: #121212;
 }
+.recipe-details {
+  display: flex;
+  flex-direction: column; /* Default to column layout for smaller screens */
 
+  @media (min-width: 768px) { /* Adjust breakpoint as needed */
+    flex-direction: row;
+  }
+}
 /* Meals Styles */
 .meals {
   display: flex;
@@ -275,7 +282,7 @@ body.dark-theme .footer {
 }
 /* Home Container Styles */
 .home-container {
-  background-image: url('https://st3.depositphotos.com/10654668/15316/i/1600/depositphotos_153165422-stock-photo-person-cooking-with-cookbook.jpg');
+  background-image: url('https://images.pexels.com/photos/1556688/pexels-photo-1556688.jpeg');
   background-size: cover;
   background-position: center;
   height: 100vh;
