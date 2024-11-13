@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const SavedRecipes = () => {
     const [savedRecipes, setSavedRecipes] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchSavedRecipes = async () => {
@@ -14,12 +17,16 @@ const SavedRecipes = () => {
 
     const handleDeleteRecipe = async (id) => {
         try {
-            await fetch(`http://0.0.0.0:3004/savedRecipes/${id}`, { method: "DELETE" });
+            await fetch(`http://0.0.0.0:3004/savedRecipes/${id}`, 
+                { method: "DELETE" });
             setSavedRecipes(savedRecipes.filter(recipe => recipe.idMeal !== id));
         } catch (error) {
             console.error("Error deleting recipe:", error);
         }
     };
+    const handleBackToRecipe = () =>{
+        navigate('/mainpage')
+    }
 
     return (
         <div>
@@ -29,10 +36,14 @@ const SavedRecipes = () => {
                     <div className='mealImg' key={recipe.idMeal}>
                         <img src={recipe.strMealThumb} alt="Product" />
                         <p>{recipe.strMeal}</p>
+                        <NavLink to={`/${recipe.idMeal}`}>
+                            <button>View Recipe</button>
+                        </NavLink>
                         <button onClick={() => handleDeleteRecipe(recipe.idMeal)}>Delete</button>
                     </div>
                 ))}
             </div>
+            <button className='backbutton' onClick={handleBackToRecipe}>Back To Recipes</button>
         </div>
     );
 };
