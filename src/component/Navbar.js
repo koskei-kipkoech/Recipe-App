@@ -19,7 +19,7 @@ const Navbar = () => {
                 <li><NavLink to="/saved-recipes">Saved Recipes</NavLink></li>
             </ul>
             <button className="theme-toggle" onClick={toggleDarkMode}>
-                {darkMode ? '🌞 Light' : '🌙 Dark'}
+                {darkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
             </button>
         </nav>
     );
