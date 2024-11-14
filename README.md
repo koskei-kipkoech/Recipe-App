@@ -24,8 +24,8 @@ To get a local copy of the project up and running, follow these simple steps.
 **Prerequisites**
 Ensure you have the following installed:
 
-1. Node.js: Download and install Node.js
-2. npm: Node package manager (comes with Node.js)
+1.  Node.js: Download and install Node.js
+2.  npm: Node package manager (comes with Node.js)
 
 **Installation**
 
@@ -41,7 +41,7 @@ Ensure you have the following installed:
 
 - npm install
 
-4. Start a json server.
+4.  Start a json server.
 
 - npx json-server --watch db.json --port 3004
 
@@ -67,8 +67,8 @@ Endpoints Used:
 **Contributing**
 Contributions are welcome! Please follow these steps:
 
-1. Fork the project.
-2. Create a feature branch (git checkout -b feature/NewFeature).
-3. Commit your changes (git commit -m 'Add some NewFeature').
-4. Push to the branch (git push origin feature/NewFeature).
-5. Open a Pull Request.
+1.  Fork the project.
+2.  Create a feature branch (git checkout -b feature/NewFeature).
+3.  Commit your changes (git commit -m 'Add some NewFeature').
+4.  Push to the branch (git push origin feature/NewFeature).
+5.  Open a Pull Request.
