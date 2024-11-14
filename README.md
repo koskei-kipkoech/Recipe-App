@@ -2,7 +2,7 @@
 
 The Recipe Application is a React-based web application that fetches recipes from an API and allows users to search for recipes using keywords or ingredients. Users can save their favorite recipes to a db.json file, filter search results, and delete saved recipes. The application is designed to be user-friendly and interactive, providing a smooth and efficient way to explore various culinary options.
 
-#Features
+# Features
 
 - Fetch Recipes: The application retrieves data from a public API and displays the results using cards that feature images, recipe names, and a link to detailed information.
 - Search Functionality: Users can search for recipes using specific ingredients or keywords.
@@ -11,14 +11,15 @@ The Recipe Application is a React-based web application that fetches recipes fro
 - Delete Saved Recipes: Users can remove saved recipes from the db.json file when they are no longer needed.
 - Interactive UI: A well-designed and responsive user interface ensures an excellent user experience.
 
-#Technologies Used
+# Technologies Used
 
 1.  React: Frontend library for building user interfaces.
 2.  JavaScript : Programming language used for the core functionality.
 3.  HTML & CSS: For structuring and styling the application.
 4.  JSON Server: Used for local persistence of saved recipes.
 
-#Getting Started
+# Getting Started
+
 To get a local copy of the project up and running, follow these simple steps.
 
 **Prerequisites**
@@ -27,7 +28,7 @@ Ensure you have the following installed:
 1.  Node.js: Download and install Node.js
 2.  npm: Node package manager (comes with Node.js)
 
-#Installation
+# Installation
 
 1.  Clone the repository:
 
@@ -49,14 +50,14 @@ Ensure you have the following installed:
 
 - npm start
 
-#Usage
+# Usage
 
 - Search for Recipes: Use the search bar to find recipes based on keywords or ingredients.
 - View Recipe Details: Click on a recipe card to see detailed information, including ingredients, steps, and preparation time.
 - Save Your Favorite Recipes: Click the "Save" button on a recipe to store it in your local database.
 - Delete Recipes: Go to your saved recipes and click the "Delete" button to remove any recipe you no longer want.
 
-#API Information
+# API Information
 
 The application fetches recipes from:
 Endpoints Used:
@@ -64,7 +65,8 @@ Endpoints Used:
 - Recipes : www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
 - Home Page: https://dummyjson.com/recipes
 
-#Contributing
+# Contributing
+
 Contributions are welcome! Please follow these steps:
 
 1.  Fork the project.
