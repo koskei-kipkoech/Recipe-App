@@ -78,7 +78,7 @@ const Home = () => {
                 <button onClick={handleNavigate} style={{ marginTop: '10px', padding: '10px 20px' }}>
                     Go to Main Page
                 </button>
-                <div className="recipe-info" style={{ marginLeft: 'auto',background: 'azure',borderRadius: '10px', maxWidth: '400px', textShadow: '0 0 3px rgba(0, 0, 0, 0.5)' }}>
+                <div className="recipe-info" style={{ marginLeft: 'auto',background: 'azure',borderRadius: '10px', maxWidth: '400px' }}>
                     <h2 className='h2'>{currentRecipe.name}</h2>
                     <p className='new'>Preparation Time:{currentRecipe.prepTimeMinutes} minutes</p>
                     <p className='new'>Cooking Time:{currentRecipe.cookTimeMinutes}minutes</p>

@@ -290,6 +290,8 @@ body.dark-theme .footer {
 .home-container {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -322,8 +324,7 @@ body.dark-theme .home-container h1 {
 .home-container p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: aqua;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: black;
 }
 
 body.dark-theme .home-container p {
