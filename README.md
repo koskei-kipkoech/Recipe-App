@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+    # MY RECIPE APPLICATION
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    The Recipe Application is a React-based web application that fetches recipes from an API and allows users to search for recipes using keywords or ingredients. Users can save their favorite recipes to a db.json file, filter search results, and delete saved recipes. The application is designed to be user-friendly and interactive, providing a smooth and efficient way to explore various culinary options.
 
-## Available Scripts
+    **Features**
 
-In the project directory, you can run:
+    - Fetch Recipes: The application retrieves data from a public API and displays the results using cards that feature images, recipe names, and a link to detailed information.
+    - Search Functionality: Users can search for recipes using specific ingredients or keywords.
+    - Save Recipes: Users can save their favorite recipes, which are persisted to a db.json file for local storage.
+    - Filter Search Results: Filtering options are available to help users narrow down their search.
+    - Delete Saved Recipes: Users can remove saved recipes from the db.json file when they are no longer needed.
+    - Interactive UI: A well-designed and responsive user interface ensures an excellent user experience.
 
-### `npm start`
+    **Technologies Used**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    1.  React: Frontend library for building user interfaces.
+    2.  JavaScript : Programming language used for the core functionality.
+    3.  HTML & CSS: For structuring and styling the application.
+    4.  JSON Server: Used for local persistence of saved recipes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    **Getting Started**
+    To get a local copy of the project up and running, follow these simple steps.
 
-### `npm test`
+    **Prerequisites**
+    Ensure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    1. Node.js: Download and install Node.js
+    2. npm: Node package manager (comes with Node.js)
 
-### `npm run build`
+    **Installation**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    1.  Clone the repository:
+    - git clone https://github.com/koskei-kipkoech/Recipe-App.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    2.  Navigate to the project directory:
+    - cd Recipe-App
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    3.  install the necessary dependencies.
+    - npm install
 
-### `npm run eject`
+    4. Start a json server.
+    - npx json-server --watch db.json --port 3004
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    5.  run react application:
+    - npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    **Usage**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    - Search for Recipes: Use the search bar to find recipes based on keywords or ingredients.
+    - View Recipe Details: Click on a recipe card to see detailed information, including ingredients, steps, and preparation time.
+    - Save Your Favorite Recipes: Click the "Save" button on a recipe to store it in your local database.
+    - Delete Recipes: Go to your saved recipes and click the "Delete" button to remove any recipe you no longer want.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    **API Information**
 
-## Learn More
+    The application fetches recipes from:
+    Endpoints Used:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    - Recipes : www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
+    _ Home Page: https://dummyjson.com/recipes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    **Contributing**
+    Contributions are welcome! Please follow these steps:
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    1. Fork the project.
+    2. Create a feature branch (git checkout -b feature/NewFeature).
+    3. Commit your changes (git commit -m 'Add some NewFeature').
+    4. Push to the branch (git push origin feature/NewFeature).
+    5. Open a Pull Request.
