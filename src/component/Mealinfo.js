@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "../App.css";
 import MoreInfo from "./MoreInfo";
 
@@ -7,8 +7,8 @@ const Mealinfo = () => {
     const [info, setInfo] = useState(null);
     const [showMoreInfo, setShowMoreInfo] =useState(false)
     const { mealid } = useParams();
+    const  navigate =useNavigate()
     console.log(mealid);
-
     useEffect(()=>{
         const getInfo = async () => {
             try{
@@ -24,6 +24,11 @@ const Mealinfo = () => {
         };
             getInfo();
     },[mealid]);
+    
+    const handleBackToSearch = () => {
+        const searchQuery = new URLSearchParams(window.location.search).get("search");
+        navigate(`/mainpage?search=${searchQuery}`);
+    };
     return (
         <div>
         {!info ? (
@@ -42,6 +47,7 @@ const Mealinfo = () => {
                             {showMoreInfo ? "Hide More Info" : "Show More Info"}
                     </button>
                     {showMoreInfo && <MoreInfo info={info} />}
+                    <button onClick={handleBackToSearch}>Back to Search</button>
                 </div>
             </div>
         )}

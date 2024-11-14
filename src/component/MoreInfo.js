@@ -23,7 +23,6 @@ const MoreInfo = ({ info }) => {
         <div className="moreInfo">
             <h3>Ingredients</h3>
             <ul className="ingredients-list">{renderIngredients()}</ul>
-
             {info.strYoutube && (
                 <div className="video">
                     <h3>Video Tutorial</h3>
