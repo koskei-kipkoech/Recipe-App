@@ -7,9 +7,9 @@ const Mainpage = () => {
     const [search, setSearch] = useState("");
     const [message, setMessage] = useState("");
 
-    // Retrieve the search term from sessionStorage when the component mounts
+    // Retrieve the search term from localStorage when the component mounts
     useEffect(() => {
-        const savedSearch = sessionStorage.getItem("searchTerm");
+        const savedSearch = localStorage.getItem("searchTerm");
         if (savedSearch) {
             setSearch(savedSearch);  // Pre-fill the input with the saved search term
             fetchData(savedSearch);  // Fetch the data for the saved search term
@@ -36,8 +36,8 @@ const Mainpage = () => {
         if (search === "") {
             setMessage("Please Enter Something 🍔");
         } else {
-            // Save the search term in sessionStorage
-            sessionStorage.setItem("searchTerm", search);
+            // Save the search term in localStorage
+            localStorage.setItem("searchTerm", search);
             fetchData(search); // Fetch data based on new search term
         }
     };
