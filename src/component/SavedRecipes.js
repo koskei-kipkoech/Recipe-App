@@ -55,7 +55,7 @@ const SavedRecipes = () => {
     };
 
     return (
-        <div>
+        <div className='saved-recipes-container'>
             <h1 className='App'>Saved Recipes</h1>
             <div className='meals'>
                 {savedRecipes.length > 0 ? (
