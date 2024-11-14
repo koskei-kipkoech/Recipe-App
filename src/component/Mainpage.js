@@ -46,7 +46,7 @@ const Mainpage = () => {
                             className="default-image"
                         />
                         <div className="overlay-message">
-                            <h1>Search Your Favorite Recipe <br/> 🍔 🥩 🌶️ 🌿 🧄 🧅 🌱</h1>
+                            <h1>Search Your Favorite Recipe🔍 <br/> 🍔 🥩 🌶️ 🌿 🧄 🧅 🌱 🍳 🥕<br/>🥬 🍤 🥓 🍗 🥦 🥣 🍝</h1>
                         </div>
                     </div>
                 )}
