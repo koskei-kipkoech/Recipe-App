@@ -288,7 +288,6 @@ body.dark-theme .footer {
 }
 /* Home Container Styles */
 .home-container {
-  background-image: url('https://images.pexels.com/photos/1556688/pexels-photo-1556688.jpeg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -307,7 +306,7 @@ body.dark-theme .home-container {
   color: #cfcfcf;
 }
 
-.home-container h1 {
+.home-container h1{
   font-size: 3rem;
   margin-bottom: 1rem;
   color: aqua;
@@ -317,11 +316,13 @@ body.dark-theme .home-container {
 body.dark-theme .home-container h1 {
   color: #03dac5;
 }
-
+.h2{
+  color: #03dac5;
+}
 .home-container p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: black;
+  color: aqua;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
