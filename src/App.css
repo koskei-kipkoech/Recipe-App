@@ -345,3 +345,34 @@ body.dark-theme .home-container button {
   background-color: #03dac5;
   color: #121212;
 }
+.default-image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  left: 0;
+}
+
+.default-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.overlay-message {
+  position: absolute; /* Positions the overlay message within the container */
+  top: 20px; /* Adjusts the distance from the top of the image */
+  left: 50%; /* Centers the message horizontally */
+  transform: translateX(-50%); /* Corrects horizontal centering */
+  width: 90%; /* Makes the message fit within the image width */
+  text-align: center;
+  color: black; /* Makes the text stand out on the image */
+  font-size: 1.3rem; /* Adjusts the font size for better visibility */
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds a shadow for readability */
+  padding: 10px 0; /* Adds some padding around the text */
+  z-index: 2; /* Ensures the message appears on top of the image */
+  border-radius: 5px;
+}

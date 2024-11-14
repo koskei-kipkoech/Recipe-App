@@ -34,9 +34,22 @@ const Mainpage = () => {
                     <button onClick={myFun}>Search</button>
                 </div>
                 <h4 className='msg'>{message}</h4>
-                <div>
-                    <Mealcards detail={data}/>
-                </div>
+                {data ? (
+                    <div>
+                        <Mealcards detail={data}/>
+                    </div>
+                ):(
+                    <div className="default-image-container">
+                        <img
+                            src="https://images.pexels.com/photos/4199098/pexels-photo-4199098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                            alt="Delicious Food"
+                            className="default-image"
+                        />
+                        <div className="overlay-message">
+                            <h1>Search Your Favorite Recipe <br/> 🍔 🥩 🌶️ 🌿 🧄 🧅 🌱</h1>
+                        </div>
+                    </div>
+                )}
             </div>
         </>
     )
