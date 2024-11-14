@@ -62,7 +62,7 @@ The application fetches recipes from:
 Endpoints Used:
 
 - Recipes : www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
-  \_ Home Page: https://dummyjson.com/recipes
+- Home Page: https://dummyjson.com/recipes
 
 **Contributing**
 Contributions are welcome! Please follow these steps:
