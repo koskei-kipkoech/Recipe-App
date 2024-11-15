@@ -1,4 +1,4 @@
-/* Navbar.css */
+/* General styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -20,6 +20,7 @@ body.dark-theme {
     color: #333333;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.763);
     transition: background-color 0.3s, color 0.3s;
+    position: relative;
 }
 
 .navbar.dark {
@@ -30,8 +31,10 @@ body.dark-theme {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    color: gold;
 }
 
+/* Navigation links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -54,18 +57,70 @@ body.dark-theme {
     transition: 0.5s ease-in-out; /* Tomato color on hover */
 }
 
+/* Theme toggle button */
 .theme-toggle {
     background: none;
     border: none;
     font-size: 1rem;
     cursor: pointer;
     transition: color 0.3s;
-    
 }
 
 .theme-toggle:hover {
     color: #ff6347; /* Tomato color on hover */
     font-size: 1.2rem;
-    transition: 0.5 ease-in-out;
+    transition: 0.5s ease-in-out;
+}
 
+/* Hamburger menu (for small screens) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Hide nav links on small screens and show hamburger */
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.open {
+        display: block;
+        position: absolute;
+        top: 60px; /* Adjust this value to ensure the nav links drop down correctly */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+        padding: 1rem 0;
+        transition: top 0.3s ease;
+        z-index: 1001;
+    }
+
+    .nav-links li {
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .nav-links a:hover {
+        color: #ff6347;
+    }
+
+    /* Make the hamburger button visible */
+    .hamburger {
+        display: block;
+    }
 }

@@ -388,6 +388,7 @@ body.dark-theme .home-container p {
   border-radius: 5px;
   color: black;
   cursor: pointer;
+  z-index: 10;
   transition: background-color 0.3s, color 0.3s;
 }
 .home-container button:hover {
@@ -462,14 +463,38 @@ body .recipe-info p {
   text-align: center;
   margin-left: auto;
 }
-@media (max-width: 650px) {
+.nav-icons {
+  display: flex;
+}
+.sidebar {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+@media (max-width: 700px) {
   .home-container {
-    padding: 1rem; /* Reduce padding for smaller screens */
+    padding: 1rem; 
     text-align: center;
     align-items: center;
+    margin-right: 20px;
   }
   .recipe-info{
     margin-left: 5px;
+  }
+  .nav-icons {
+    display: none; /* Hide icons on small screens */
+  }
+
+  .sidebar {
+    display: block; /* Show sidebar on small screens */
   }
   .default-image {
     max-width: 100%; /* Make image take full width */
@@ -494,7 +519,7 @@ body .recipe-info p {
   }
   
   .searchBar button {
-    width: 40%; /* Full width button */
+    width: 40%; /* Full åwidth button */
     font-size: 18px; /* Adjust font size */
   }
 
