@@ -1,12 +1,17 @@
 /* Base styles */
 body {
   margin: 0;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
 }
-*{
+html {
   transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+
 }
 
 body.dark-theme {
@@ -23,6 +28,8 @@ body.dark-theme {
 .recipe-info:hover {
   transform: scale(1.1);
   transition: transform 0.3s;
+  background-color: #a0a0a0;
+  color: white;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow for a pop effect */
 }
 .App{
@@ -410,17 +417,88 @@ body.dark-theme .home-container button {
   border-radius: 10px;
 }
 .overlay-message {
-  position: absolute; /* Positions the overlay message within the container */
-  top: 20px; /* Adjusts the distance from the top of the image */
-  left: 50%; /* Centers the message horizontally */
-  transform: translateX(-50%); /* Corrects horizontal centering */
-  width: 90%; /* Makes the message fit within the image width */
+  position: absolute; 
+  top: 20px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 90%; 
   text-align: center;
-  color: black; /* Makes the text stand out on the image */
-  font-size: 1.3rem; /* Adjusts the font size for better visibility */
+  color: black; 
+  font-size: 1.3rem;
   font-weight: bold;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds a shadow for readability */
-  padding: 10px 0; /* Adds some padding around the text */
-  z-index: 2; /* Ensures the message appears on top of the image */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  padding: 10px 0; 
+  z-index: 2; 
   border-radius: 5px;
+}
+body.dark-theme .recipe-info {
+  background-color: gray; /* Dark background */
+  color: #cfcfcf; /* Light text */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Softer shadow */
+}
+
+body.dark-theme .recipe-info h2 {
+  color: aquamarine; /* Accent color for headings in dark mode */
+}
+
+body.dark-theme .recipe-info p {
+  color: whitesmoke; /* Light text color for paragraphs */
+}
+body .recipe-info {
+  background-color: #ffffff; /* Light background */
+  color: #333333; /* Dark text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Standard shadow */
+}
+
+body .recipe-info h2 {
+  color: green; /* Accent color for headings in light mode */
+}
+
+body .recipe-info p {
+  color: #555555; /* Slightly darker text color for readability */
+}
+.recipe-info{
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+}
+@media (max-width: 650px) {
+  .home-container {
+    padding: 1rem; /* Reduce padding for smaller screens */
+    text-align: center;
+    align-items: center;
+  }
+  .recipe-info{
+    margin-left: 5px;
+  }
+  .default-image {
+    max-width: 100%; /* Make image take full width */
+    height: auto; /* Keep aspect ratio */
+  }
+
+  .overlay-message {
+    margin-right: 10px;
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    padding: 8px; /* Reduce padding */
+  }
+  
+  .searchBar {
+    flex-direction: column; /* Stack input and button vertically */
+    gap: 5px; /* Reduce gap between elements */
+  }
+  
+  .searchBar input {
+    margin-left:5px;
+    width: 90%; /* Full width input */
+    font-size: 18px; /* Adjust font size */
+  }
+  
+  .searchBar button {
+    width: 40%; /* Full width button */
+    font-size: 18px; /* Adjust font size */
+  }
+
+  .footer {
+    padding: 0.5rem; /* Reduce footer padding */
+  }
 }
