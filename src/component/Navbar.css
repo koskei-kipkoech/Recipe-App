@@ -33,6 +33,10 @@ body.dark-theme {
     font-weight: bold;
     color: gold;
 }
+.logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 
 /* Navigation links */
 .nav-links {
@@ -81,7 +85,13 @@ body.dark-theme {
     cursor: pointer;
     z-index: 2001;
 }
-
+body.dark-theme .hamburger {
+    color: #ffffff; /* White color for better visibility in dark mode */
+}
+.hamburger:hover {
+    transform: scale(1.1); /* Slight scaling for a more interactive feel */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transitions */
+}
 /* Responsive styles */
 @media (max-width: 768px) {
     /* Hide nav links on small screens and show hamburger */
@@ -103,12 +113,29 @@ body.dark-theme {
         transition: top 0.3s ease;
         z-index: 1001;
     }
-
+    
     .nav-links li {
         padding: 1rem;
+        transform: scale(1.2);
         border-bottom: 1px solid #ddd;
     }
-
+    body.dark-theme .nav-links {
+        background-color: #333333; /* Dark background color */
+        color: #ffffff; /* Light text color */
+        box-shadow: 0 3px 4px rgba(255, 255, 255, 0.1); /* Adjust shadow for a subtle effect */
+    }
+    
+    body.dark-theme .nav-links li {
+        border-bottom: 1px solid #555555; /* Lighter border for separation */
+    }
+    
+    body.dark-theme .nav-links a {
+        color: #ffffff; /* Ensure links are visible in dark mode */
+    }
+    
+    body.dark-theme .nav-links a:hover {
+        color: #ff6347; /* Keep the hover effect color (tomato) for contrast */
+    }
     .nav-links a {
         font-size: 1.2rem;
         color: #333;
